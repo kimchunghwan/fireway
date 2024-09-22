@@ -9,7 +9,7 @@ const prog = sade('fireway').version(pkg.version);
 prog
   .option("--require", "Requires a module before executing")
   .example("migrate")
-  .example('--require="ts-node/register" migrate')
+  .example('--require="require-tsx" migrate')
 
   .command("migrate")
   .option("--path", "Path to migration files", "./migrations")

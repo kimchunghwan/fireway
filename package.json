@@ -1,5 +1,5 @@
 {
-  "name": "@keii2k/fireway",
+  "name": "@kimchunghwan/fireway",
   "version": "2.1.0",
   "description": "Schema migration tool for Firestore",
   "types": "fireway.d.ts",

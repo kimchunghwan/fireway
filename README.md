@@ -44,7 +44,7 @@ Options
 
 Examples
   $ fireway migrate
-  $ fireway --require="ts-node/register" migrate
+  $ fireway --require="require-tsx" migrate
 ```
 
 ### `fireway migrate`
