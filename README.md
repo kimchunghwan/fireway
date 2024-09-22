@@ -1,3 +1,8 @@
+# COMMENT 
+this repo forked from [fireway](https://github.com/kevlened/fireway)
+
+changed typescript run with `ts-node` -> `tsx`
+
 # fireway
 A schema migration tool for firestore heavily inspired by [flyway](https://flywaydb.org/)
 
@@ -64,7 +69,7 @@ Examples
   $ fireway migrate --projectId=my-staging-id
   $ fireway migrate --dryrun
   $ fireway migrate --forceWait
-  $ fireway --require="ts-node/register" migrate
+  $ fireway --require="require-tsx" migrate
 ```
 
 ## Migration file format
@@ -85,20 +90,7 @@ For type checking and Intellisense, there are two options:
 
 ### TypeScript
 
-1. Ensure [`ts-node`](https://www.npmjs.com/package/ts-node) is installed
-2. Define a `ts-node` configuration block inside your `tsconfig.json` file:
-
-   ```json
-   {
-     "ts-node": {
-       "transpileOnly": true,
-       "compilerOptions": {
-         "module": "commonjs"
-       }
-     }
-   }
-   ```
-3. Create a migration
+1. Create a migration
 
    ```ts
     // ./migrations/v0.0.1__typescript-example.ts
@@ -109,10 +101,10 @@ For type checking and Intellisense, there are two options:
         await firestore.collection('data').doc('one').set({key: 'value'});
     };
    ```
-4. Run `fireway migrate` with the `require` option
+2. Run `fireway migrate` with the `require` option
 
    ```sh
-   $ fireway migrate --require="ts-node/register"
+   $ fireway migrate --require="require-tsx"
    ```
 
 ### JSDoc

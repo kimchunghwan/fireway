@@ -408,11 +408,11 @@ test('Delete a field', wrapper(async ({t, projectId, firestore, app}) => {
 
 test('TypeScript (run all TS last for perf reasons and only require TS once)', wrapper(async ({t, projectId, firestore, app}) => {
 	const stats = await fireway.migrate({
-		projectId,
-		path: __dirname + '/tsMigration',
-		app,
-		require: 'ts-node/register'
-	});
+    projectId,
+    path: __dirname + '/tsMigration',
+    app,
+    require: 'require-tsx',
+  });
 
 	const snapshot = await firestore.collection('fireway').get();
 	let dataSnapshot = await firestore.collection('data').get();
