@@ -17,8 +17,8 @@
   ],
   "main": "src/index.js",
   "bin": "src/cli.js",
-  "repository": "git@github.com:kevlened/fireway.git",
-  "author": "kevlened <boyettel@gmail.com>",
+  "repository": "git@github.com:kimchunghwan/fireway.git",
+  "author": "kimchunghwan <keii2k84@gmail.com>",
   "license": "MIT",
   "scripts": {
     "setup": "firebase setup:emulators:firestore",
