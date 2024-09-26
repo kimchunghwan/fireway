@@ -6,3 +6,4 @@ export interface MigrateOptions {
 	Timestamp: typeof import("@google-cloud/firestore").Timestamp;
 	dryrun: boolean;
 }
+declare module "@keii2k/fireway/src/index";
